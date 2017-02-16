@@ -22,5 +22,8 @@
       "jasmine",
       "firebase"
     ]
-  }
+  },
+  "files": [
+    "main"
+  ]
 }
