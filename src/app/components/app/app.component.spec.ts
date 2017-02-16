@@ -3,19 +3,18 @@
 import {TestBed, async} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-import {MaterialModule, MdButton, MdButtonModule} from "@angular/material";
+import {MaterialModule} from "@angular/material";
 import {Routes, RouterModule} from "@angular/router";
 import {AngularFireModule} from 'angularfire2';
-import {CatalogComponent} from './catalog/catalog.component';
-import {AddFormComponent} from './add-form/add-form.component';
-import {ClubService} from "./club.service";
-import {ClubValidatorDirective} from './club-validator.directive';
-import {InfoComponent} from './info/info.component';
-import {EchoService} from "./echo.service";
-import {environment} from '../environments/environment';
+import {CatalogComponent} from '../catalog/catalog.component';
+import {AddFormComponent} from '../add-form/add-form.component';
+import {ClubService} from "../../services/club.service";
+import {ClubValidatorDirective} from '../../directives/club-validator.directive';
+import {InfoComponent} from '../info/info.component';
+import {EchoService} from "../../services/echo.service";
+import {environment} from '../../../environments/environment';
 import {APP_BASE_HREF} from '@angular/common';
 
 const appRoutes: Routes = [

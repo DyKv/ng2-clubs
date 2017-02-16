@@ -1,14 +1,13 @@
-import {Component, OnInit, Output, EventEmitter} from '@angular/core';
-import {ClubService} from "../club.service";
-import {FirebaseObjectObservable} from "angularfire2";
-import {Club} from "../club";
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from "@angular/router";
-import {EchoService} from "../echo.service";
+import {Club} from "../../models/club";
+import {ClubService} from "../../services/club.service";
+import {EchoService} from "../../services/echo.service";
 
 @Component({
   selector: 'app-info',
-  templateUrl: './info.component.html',
-  styleUrls: ['./info.component.css']
+  templateUrl: 'info.component.html',
+  styleUrls: ['info.component.css']
 })
 export class InfoComponent implements OnInit {
 

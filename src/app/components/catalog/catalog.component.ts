@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {AngularFire, FirebaseListObservable} from 'angularfire2';
+import {FirebaseListObservable} from 'angularfire2';
 import {Router} from "@angular/router";
-import {ClubService} from "../club.service";
-import {Club} from "../club";
-import {AddFormComponent} from "../add-form/add-form.component";
 import {MdDialog} from "@angular/material";
-import {EchoService} from "../echo.service";
+import {Club} from "../../models/club";
+import {ClubService} from "../../services/club.service";
+import {EchoService} from "../../services/echo.service";
+import {AddFormComponent} from "../add-form/add-form.component";
 
 @Component({
   selector: 'app-catalog',
@@ -28,7 +28,6 @@ export class CatalogComponent implements OnInit {
     this.dialog.open(AddFormComponent, {
       height: '250px'
     });
-    //this.router.navigate(['/add']);
   }
 
   clubInfo(club: Club) {

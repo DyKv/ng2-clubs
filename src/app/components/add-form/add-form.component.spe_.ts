@@ -1,15 +1,16 @@
 /* tslint:disable:no-unused-variable */
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {async, ComponentFixture, TestBed, inject} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {DebugElement} from '@angular/core';
 
 import {AddFormComponent} from './add-form.component';
-import {MaterialModule, MdDialogModule, MdDialogRef, MdDialog} from "@angular/material";
+import {MaterialModule, MdDialogModule, MdDialogRef, MdDialog, MdDialogTitle} from "@angular/material";
 import {NgForm, FormsModule} from "@angular/forms";
-import {ClubService} from "../club.service";
 import {AngularFireModule} from "angularfire2";
-import {environment} from "../../environments/environment";
 import {RouterModule} from "@angular/router";
+import {environment} from "../../../environments/environment";
+import {ClubService} from "../../services/club.service";
+import {BrowserDynamicTestingModule} from "@angular/platform-browser-dynamic/testing";
 
 describe('AddFormComponent', () => {
   let component: AddFormComponent;
@@ -20,21 +21,30 @@ describe('AddFormComponent', () => {
       declarations: [AddFormComponent],
       imports: [
         //  BrowserModule,
-        FormsModule,
+        //FormsModule,
         // HttpModule,
         MaterialModule.forRoot(),
+        //BrowserDynamicTestingModule,
         //RouterModule.forRoot(appRoutes),
-        MdDialogModule.forRoot(),
+        //MdDialogModule.forRoot(),
+
         AngularFireModule.initializeApp(environment.firebaseConfig),
       ],
       providers: [
         ClubService,
-        MdDialogRef
+        //MdDialogRef
         //EchoService,
         // {provide: APP_BASE_HREF, useValue : '/info/x' }
-      ],
-    })
-      .compileComponents();
+      ]
+    });
+
+    TestBed.overrideModule(BrowserDynamicTestingModule, {
+      set: {
+        entryComponents: [AddFormComponent]
+      }
+    });
+
+    TestBed.compileComponents();
   }));
 
   beforeEach(() => {

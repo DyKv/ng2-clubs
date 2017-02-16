@@ -1,5 +1,5 @@
 import {Injectable, Inject} from '@angular/core';
-import {Club} from "./club";
+import {Club} from "../models/club";
 import {AngularFire, FirebaseListObservable, FirebaseApp, FirebaseObjectObservable} from 'angularfire2';
 
 @Injectable()

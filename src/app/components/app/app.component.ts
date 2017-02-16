@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Output, Input, OnInit} from '@angular/core';
-import {EchoService} from "./echo.service";
+import {Component} from '@angular/core';
+import {EchoService} from "../../services/echo.service";
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
 })
 export class AppComponent {
 
@@ -15,7 +15,6 @@ export class AppComponent {
   }
 
   onChangeTitle(title: string): void {
-    console.log('onChangeTitle');
     this.title = title;
   }
 

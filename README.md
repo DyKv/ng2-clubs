@@ -1,6 +1,13 @@
 # Clubs
 
+The demo app for demonstration of usage Firebase service and Material Design integration with Angular framework.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.31.
+
+## Setup
+Run `npm install` for setup application modules
+
+# Some Angular CLI instructions
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

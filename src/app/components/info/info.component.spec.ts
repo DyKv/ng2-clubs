@@ -2,47 +2,42 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {DebugElement} from '@angular/core';
+import {AngularFireModule} from 'angularfire2';
 
-import {CatalogComponent} from './catalog.component';
-import {MaterialModule} from "@angular/material";
-import {ClubService} from "../club.service";
-import {AngularFireModule} from "angularfire2";
-import {environment} from "../../environments/environment";
+import {InfoComponent} from './info.component';
 import {RouterModule, Routes} from "@angular/router";
 import {APP_BASE_HREF} from '@angular/common';
-import {EchoService} from "../echo.service";
+import {environment} from "../../../environments/environment";
+import {ClubService} from "../../services/club.service";
+import {EchoService} from "../../services/echo.service";
 
 const appRoutes: Routes = [
-  {path: '', component: CatalogComponent},
-  //{ path: 'info/:key', component: InfoComponent }
+  {path: 'info/:key', component: InfoComponent}
 ];
 
-describe('CatalogComponent', () => {
-  let component: CatalogComponent;
-  let fixture: ComponentFixture<CatalogComponent>;
+describe('InfoComponent', () => {
+  let component: InfoComponent;
+  let fixture: ComponentFixture<InfoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CatalogComponent],
+      declarations: [InfoComponent],
       imports: [
-        //  BrowserModule,
-        //  FormsModule,
-        // HttpModule,
-        MaterialModule.forRoot(),
         RouterModule.forRoot(appRoutes),
         AngularFireModule.initializeApp(environment.firebaseConfig),
       ],
       providers: [
         ClubService,
         EchoService,
-        {provide: APP_BASE_HREF, useValue: '/'}
+        {provide: APP_BASE_HREF, useValue: '/info/x'}
       ],
     })
       .compileComponents();
+
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CatalogComponent);
+    fixture = TestBed.createComponent(InfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
