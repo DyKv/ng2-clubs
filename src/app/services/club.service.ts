@@ -9,11 +9,11 @@ export class ClubService {
   private databaseRef: firebase.database.Reference;
 
   static get IMAGES_DIR() {
-    return "images"
+    return "images";
   }
 
   static get CLUBS_DIR() {
-    return "clubs"
+    return "clubs";
   }
 
   constructor(private af: AngularFire, @Inject(FirebaseApp) fa: any /*firebase.app.App*/) {
@@ -29,7 +29,7 @@ export class ClubService {
           orderByChild: 'name',
           equalTo: name
         }
-      }
+      };
     }
     return this.af.database.list(`/${ClubService.CLUBS_DIR}`, query);
   }

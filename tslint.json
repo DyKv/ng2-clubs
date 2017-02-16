@@ -13,8 +13,7 @@
     "eofline": true,
     "forin": true,
     "import-blacklist": [
-      true,
-      "rxjs"
+      true
     ],
     "import-spacing": true,
     "indent": [
@@ -68,13 +67,10 @@
     ],
     "prefer-const": true,
     "quotemark": [
-      true,
-      "single"
+      true
     ],
     "radix": true,
-    "semicolon": [
-      "always"
-    ],
+    "semicolon": true,
     "triple-equals": [
       true,
       "allow-null-check"

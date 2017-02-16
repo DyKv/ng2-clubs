@@ -1,7 +1,7 @@
 import {Directive, forwardRef} from "@angular/core";
 import {NG_ASYNC_VALIDATORS, Validator, AbstractControl} from "@angular/forms";
-import {Observable} from "rxjs";
 import {ClubService} from "../services/club.service";
+import {Observable} from "rxjs";
 
 @Directive({
   selector: '[appClubValidator]',

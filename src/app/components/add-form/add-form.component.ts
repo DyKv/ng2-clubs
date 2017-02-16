@@ -5,8 +5,8 @@ import {Club} from "../../models/club";
 
 @Component({
   selector: 'app-add-form',
-  templateUrl: 'add-form.component.html',
-  styleUrls: ['add-form.component.css']
+  templateUrl: './add-form.component.html',
+  styleUrls: ['./add-form.component.css']
 })
 export class AddFormComponent implements OnInit {
   @Input() club: Club;
@@ -34,7 +34,7 @@ export class AddFormComponent implements OnInit {
   }
 
   fileChange(event) {
-    let fileList: FileList = event.target.files;
+    const fileList: FileList = event.target.files;
     if (fileList.length > 0) {
       this.logoFile = fileList[0];
     }

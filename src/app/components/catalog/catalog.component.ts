@@ -9,8 +9,8 @@ import {AddFormComponent} from "../add-form/add-form.component";
 
 @Component({
   selector: 'app-catalog',
-  templateUrl: 'catalog.component.html',
-  styleUrls: ['catalog.component.css']
+  templateUrl: './catalog.component.html',
+  styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent implements OnInit {
 
