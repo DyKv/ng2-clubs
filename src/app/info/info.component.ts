@@ -14,7 +14,8 @@ export class InfoComponent implements OnInit {
 
   club: Club;
 
-  constructor(private clubService: ClubService, private route: ActivatedRoute, private echoService: EchoService) { }
+  constructor(private clubService: ClubService, private route: ActivatedRoute, private echoService: EchoService) {
+  }
 
   ngOnInit() {
     this.route.params

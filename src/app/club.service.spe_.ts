@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async, inject } from '@angular/core/testing';
-import { ClubService } from './club.service';
+import {TestBed, async, inject} from '@angular/core/testing';
+import {ClubService} from './club.service';
 import {AngularFire, FirebaseUrl} from "angularfire2";
 import {Token} from "@angular/compiler";
 import {Provider} from '@angular/core';

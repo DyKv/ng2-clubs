@@ -1,10 +1,12 @@
 .club-button, .club-card {
     margin: 20px;
 }
+
 .club-card {
     height: 50px;
     cursor: pointer;
 }
+
 .club-card-image {
     background-size: cover;
     height: 40px;

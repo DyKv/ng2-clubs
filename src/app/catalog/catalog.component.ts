@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import {Component, OnInit} from '@angular/core';
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
 import {Router} from "@angular/router";
 import {ClubService} from "../club.service";
 import {Club} from "../club";

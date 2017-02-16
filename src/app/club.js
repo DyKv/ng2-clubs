@@ -1,7 +1,8 @@
 "use strict";
 var Club = (function () {
-    function Club() {
-    }
-    return Club;
+  function Club() {
+  }
+
+  return Club;
 }());
 exports.Club = Club;

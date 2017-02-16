@@ -1,6 +1,6 @@
 import {Injectable, Inject} from '@angular/core';
 import {Club} from "./club";
-import { AngularFire, FirebaseListObservable, FirebaseApp, FirebaseObjectObservable } from 'angularfire2';
+import {AngularFire, FirebaseListObservable, FirebaseApp, FirebaseObjectObservable} from 'angularfire2';
 
 @Injectable()
 export class ClubService {
@@ -42,7 +42,7 @@ export class ClubService {
     return this.af.database.list(`/${ClubService.CLUBS_DIR}`).push(club);
   }
 
-  uploadImage(file: File, name: string):  any {
+  uploadImage(file: File, name: string): any {
     return this.storageRef.child(`${ClubService.IMAGES_DIR}/${name}`).put(file);
   }
 

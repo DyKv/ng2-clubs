@@ -1,9 +1,9 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {By} from '@angular/platform-browser';
+import {DebugElement} from '@angular/core';
 
-import { AddFormComponent } from './add-form.component';
+import {AddFormComponent} from './add-form.component';
 import {MaterialModule, MdDialogModule, MdDialogRef, MdDialog} from "@angular/material";
 import {NgForm, FormsModule} from "@angular/forms";
 import {ClubService} from "../club.service";
@@ -17,10 +17,10 @@ describe('AddFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddFormComponent ],
+      declarations: [AddFormComponent],
       imports: [
         //  BrowserModule,
-          FormsModule,
+        FormsModule,
         // HttpModule,
         MaterialModule.forRoot(),
         //RouterModule.forRoot(appRoutes),
@@ -31,10 +31,10 @@ describe('AddFormComponent', () => {
         ClubService,
         MdDialogRef
         //EchoService,
-       // {provide: APP_BASE_HREF, useValue : '/info/x' }
+        // {provide: APP_BASE_HREF, useValue : '/info/x' }
       ],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

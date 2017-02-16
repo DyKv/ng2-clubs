@@ -37,17 +37,17 @@ export class AddFormComponent implements OnInit {
       });
     });
     /*Promise.all([
-      this.clubService.create(this.club),
-      this.clubService.uploadImage(this.logoFile, this.logoFile.name)
-    ]).then((data) => {
-      console.log(data);
-      this.router.navigate(['/']);
-    });*/
+     this.clubService.create(this.club),
+     this.clubService.uploadImage(this.logoFile, this.logoFile.name)
+     ]).then((data) => {
+     console.log(data);
+     this.router.navigate(['/']);
+     });*/
   }
 
   fileChange(event) {
     let fileList: FileList = event.target.files;
-    if(fileList.length > 0) {
+    if (fileList.length > 0) {
       this.logoFile = fileList[0];
       //this.club.logo = this.logoFile.name;
     }

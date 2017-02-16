@@ -1,7 +1,7 @@
 <button (click)="addDialog()" md-raised-button class="club-button">Create new club</button>
-<md-card *ngFor="let club of clubs | async" class="club-card" (click)="clubInfo(club)" >
+<md-card *ngFor="let club of clubs | async" class="club-card" (click)="clubInfo(club)">
   <md-card-header>
-    <div md-card-avatar  [ngStyle]="{ 'background-image': 'url(' + club.logo + ')'}" class="club-card-image"></div>
+    <div md-card-avatar [ngStyle]="{ 'background-image': 'url(' + club.logo + ')'}" class="club-card-image"></div>
     <md-card-title>{{club.name}}</md-card-title>
     <md-card-subtitle>{{club.description}}</md-card-subtitle>
   </md-card-header>
