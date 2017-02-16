@@ -7,8 +7,8 @@ describe('clubs App', function() {
     page = new ClubsPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display toolbar with text Clubs', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Clubs');
   });
 });

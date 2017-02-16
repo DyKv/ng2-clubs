@@ -1,0 +1,25 @@
+<h1 md-dialog-title>Add club</h1>
+<form (ngSubmit)="add(addForm)" #addForm="ngForm" *ngIf="!loading">
+  <md-input-container dividerColor="{{name.valid || name.pristine ? 'primary' : 'warn' }}"
+                      hintLabel="{{ name.errors && !name.pristine ? name.errors.required ? 'Required' : name.errors.exist ? 'Exist ' : '' : '' }}">
+    <input [(ngModel)]="club.name"
+           placeholder="Club name"
+           required appClubValidator name="name"
+           #name="ngModel" md-input>
+    {{ name.className }}
+  </md-input-container>
+
+  <md-input-container dividerColor="{{description.valid || description.pristine ? 'primary' : 'warn' }}"
+                      hintLabel="{{ description.errors && !description.pristine  ? description.errors.required ? 'Required' : '' : '' }}">
+    <input [(ngModel)]="club.description"
+           placeholder="Club description"
+           required name="description" #description="ngModel" md-input>
+  </md-input-container>
+  <input type="file" (change)="fileChange($event)" placeholder="Upload image" accept=".png,.jpg,.jpeg,.gif" required>
+  <button type="submit" [disabled]="!addForm.form.valid" md-dialog-actions md-raised-button class="add-form-button">
+    Save
+  </button>
+</form>
+<div md-dialog-content *ngIf="loading">
+  Upload new club...
+</div>
