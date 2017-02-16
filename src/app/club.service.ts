@@ -16,7 +16,7 @@ export class ClubService {
     return "clubs"
   }
 
-  constructor(private af: AngularFire, @Inject(FirebaseApp) fa: firebase.app.App) {
+  constructor(private af: AngularFire, @Inject(FirebaseApp) fa: any /*firebase.app.App*/) {
     this.storageRef = fa.storage().ref();
     this.databaseRef = fa.database().ref();
   }
